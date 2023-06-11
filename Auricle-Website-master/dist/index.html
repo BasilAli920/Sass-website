@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML & CSS - Auricle Website</title>
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <div class="navbar-top">
+          <img src="./css/images/logo.png" alt="Logo Header" class="logo" />
+          <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="./pages/about.html">About</a></li>
+          <li><a href="./pages/services.html">Service</a></li>
+          <li><a href="./pages/screenshoots.html">Screenshoots</a></li>
+          <li><a href="./pages/pricing.html">Pricing</a></li>
+          <li><a href="./pages/team.html">Team</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="navbar-button">
+          <div class="btn">Get Support</div>
+        </div>
+      </nav>
+    </header>
+    <div class="sidebar">
+      <ul class="sidebar-nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="./pages/services.html">Service</a></li>
+        <li><a href="./pages/screenshoots.html">Screenshoots</a></li>
+        <li><a href="./pages/pricing.html">Pricing</a></li>
+        <li><a href="./pages/team.html">Team</a></li>
+        <li><a href="./pages/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <script src="./js/sidebar-toggle.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        disable: "phone",
+      });
+    </script>
+
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of New York
+        var newYork = { lat: 40.73061, lng: -73.935242 };
+        // The map, centered at newYork
+        var map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 10,
+          center: newYork,
+        });
+        // The marker, positioned at newYork
+        var marker = new google.maps.Marker({ position: newYork, map: map });
+      }
+    </script>
+    <!--Load the API from the specified URL
+          * The async attribute allows the browser to render the page while the API loads
+          * The key parameter will contain your own API key (which is not needed for this tutorial)
+          * The callback parameter executes the initMap() function
+          -->
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz6m0GwKQ0tMin7ryXrPlQO6DwFbH8zlI&callback=initMap"
+    ></script>
+  </body>
+</html>
